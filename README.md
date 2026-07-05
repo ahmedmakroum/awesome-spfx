@@ -56,6 +56,7 @@ There isn't a lot of curated, up-to-date documentation specifically for the SPFx
 
 - [pnp/sp-dev-fx-extensions](https://github.com/pnp/sp-dev-fx-extensions) - Community sample gallery for SPFx Application Customizers, Field Customizers, and Command Sets.
 - [pnp/sp-dev-fx-webparts](https://github.com/pnp/sp-dev-fx-webparts) - Community sample gallery of hundreds of SPFx web parts, Teams tabs, and personal apps.
+- [OlivierCC/spfx-40-fantastics](https://github.com/OlivierCC/spfx-40-fantastics) - Sample kit of high-visual client-side web parts including carousels, image galleries, animations, maps, and editors.
 
 ## Dev Tools & VS Code Extensions
 
