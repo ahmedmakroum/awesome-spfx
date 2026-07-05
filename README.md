@@ -11,6 +11,7 @@ There isn't a lot of curated, up-to-date documentation specifically for the SPFx
 ## Contents
 
 - [Official Docs & Resources](#official-docs--resources)
+- [Environment Setup Notes](#environment-setup-notes)
 - [Getting Started / Generators](#getting-started--generators)
 - [PnP Libraries](#pnp-libraries)
 - [Sample Galleries](#sample-galleries)
@@ -19,6 +20,7 @@ There isn't a lot of curated, up-to-date documentation specifically for the SPFx
 - [Testing & CI/CD](#testing--cicd)
 - [AI / Copilot Integrations](#ai--copilot-integrations)
 - [Learning Resources](#learning-resources)
+- [Video Tutorials](#video-tutorials)
 - [Community](#community)
 - [Licensing](#licensing)
 
@@ -29,6 +31,12 @@ There isn't a lot of curated, up-to-date documentation specifically for the SPFx
 - [SharePoint Framework extensions overview](https://learn.microsoft.com/en-us/sharepoint/dev/spfx/extensions/overview-extensions) - Introduction to Application Customizers, Field Customizers, and Command Sets.
 - [Set up your SharePoint Framework development environment](https://learn.microsoft.com/en-us/sharepoint/dev/spfx/set-up-your-development-environment) - Official environment setup guide (Node.js, npm, tooling).
 - [SharePoint Framework category — Microsoft 365 Developer Blog](https://devblogs.microsoft.com/microsoft365dev/category/sharepoint-framework/) - Official announcements, roadmap updates, and release notes.
+
+## Environment Setup Notes
+
+- [Microsoft 365 Developer Program FAQ](https://learn.microsoft.com/en-us/office/developer-program/microsoft-365-developer-program-faq) - Microsoft paused issuing free instant sandbox tenants after a January 2024 security incident and still hasn't fully restored them. In practice, plan on using your company/work tenant, converting a purchased Microsoft 365 subscription into a dev tenant, or qualifying through a Visual Studio subscription.
+- [Unavailable hosted workbench (Microsoft Community Hub thread)](https://techcommunity.microsoft.com/t5/sharepoint-developer/unavailable-hosted-workbench/td-p/3043377) - Background on why the fully local workbench (`https://localhost:4321/temp/workbench.html`, no SharePoint site needed) was removed starting with SPFx v1.13, and why the hosted workbench has required a tenant domain (via the `SPFX_SERVE_TENANT_DOMAIN` environment variable) since v1.17. If you have no tenant access at all, pin your project to SPFx v1.12.1 or earlier to keep a working local workbench.
+- [🙏 Please upgrade React to a modern, supported version (SharePoint/sp-dev-docs#8265)](https://github.com/SharePoint/sp-dev-docs/issues/8265) - Context on why SPFx pins an exact React version per release (React 17.0.1 as of SPFx 1.19-1.23, see the [compatibility matrix](#official-docs--resources)). Install React with `--save-exact` matching your SPFx version - mismatches fail silently at runtime instead of at build time.
 
 ## Getting Started / Generators
 
@@ -70,6 +78,8 @@ There isn't a lot of curated, up-to-date documentation specifically for the SPFx
 
 ## AI / Copilot Integrations
 
+> **From experience:** for day-to-day SPFx development, ChatGPT Codex has felt noticeably more effective than Claude - it seems to hold SPFx-specific context (manifests, gulp/Heft toolchain quirks, PnP API shapes) better across a session and needs less hand-holding. This is a personal, anecdotal observation rather than a benchmark, so your mileage may vary depending on the task.
+
 - [@spfx GitHub Copilot Chat participant](https://pnp.github.io/blog/post/spfx-toolkit-vscode-chat-pre-release/) - SPFx Toolkit's Copilot Chat participant that answers SPFx setup and scaffolding questions directly inside VS Code.
 - [pnp/cli-microsoft365-mcp-server](https://github.com/pnp/cli-microsoft365-mcp-server) - MCP server that exposes the CLI for Microsoft 365 as tools for AI agents to manage Microsoft 365 and SPFx projects.
 - [Microsoft 365 Copilot extensibility overview](https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/overview-copilot-connector) - Official docs on connecting Microsoft Graph data and custom connectors to Microsoft 365 Copilot.
@@ -81,6 +91,14 @@ There isn't a lot of curated, up-to-date documentation specifically for the SPFx
 - [PnP blog](https://pnp.github.io/blog/) - Official Microsoft 365 & Power Platform Community blog covering SPFx releases, tooling, and how-tos.
 - [SharePoint Framework — Configure a development environment (Microsoft Learn training)](https://learn.microsoft.com/en-us/training/modules/sharepoint-spfx-get-started/) - Free, guided Microsoft Learn training module for getting started with SPFx.
 - [Microsoft 365 & SharePoint PnP Weekly](https://www.youtube.com/playlist?list=PLB_fukFwGnsRCl_XIYjnJbMwOKlI9xkPK) - Long-running weekly video/podcast series covering SharePoint, SPFx, and Microsoft 365 dev news.
+
+## Video Tutorials
+
+> Treat these as onboarding material: they're great for learning how to scaffold a project, run it locally, and package/deploy it, but SPFx's APIs and best practices move fast enough that specific code shown in older videos can go stale within a year or two. Cross-check anything beyond the basics against the official docs linked above.
+
+- [SharePoint Framework for Beginners 2025 (playlist)](https://www.youtube.com/watch?v=tL-qXVMDtFk) - Actively updated, from-scratch series covering environment setup, Yeoman scaffolding, and building web parts with React hooks.
+- [SPGuides YouTube channel](https://www.youtube.com/channel/UCm9EZ5sUkwJCbA3ctabVQJg) - Large, frequently updated library of SPFx, SharePoint, and Power Platform video tutorials from Microsoft MVP Bijay Kumar.
+- [Mastering the SharePoint Framework (Voitanos)](https://www.voitanos.io/course-master-sharepoint-framework/) - Paid, in-depth video course by Andrew Connell covering SPFx fundamentals through advanced extensibility topics.
 
 ## Community
 
