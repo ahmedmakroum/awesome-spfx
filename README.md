@@ -60,6 +60,7 @@ There isn't a lot of curated, up-to-date documentation specifically for the SPFx
 ## Dev Tools & VS Code Extensions
 
 - [SharePoint Framework Toolkit (vscode-viva)](https://github.com/pnp/vscode-viva) - VS Code extension covering the full SPFx lifecycle: scaffolding, samples, Gulp tasks, and tenant/app catalog management.
+- [SP Editor](https://github.com/pnp/sp-editor) - Chrome/Edge browser extension for editing JS/CSS files, property bag values, and webhooks, and running PnP JS snippets directly against a SharePoint site from DevTools.
 - [SP Formatter](https://marketplace.visualstudio.com/items?itemName=s-kainet.sp-formatter) - VS Code extension (paired with a browser extension) for editing SharePoint column, view, and form formatting JSON with IntelliSense and live preview.
 - [SPFx Essentials](https://marketplace.visualstudio.com/items?itemName=eliostruyf.spfx-essentials) - VS Code extension with snippets and commands that speed up everyday SPFx project tasks.
 
@@ -81,9 +82,11 @@ There isn't a lot of curated, up-to-date documentation specifically for the SPFx
 > **From experience:** for day-to-day SPFx development, ChatGPT Codex has felt noticeably more effective than Claude - it seems to hold SPFx-specific context (manifests, gulp/Heft toolchain quirks, PnP API shapes) better across a session and needs less hand-holding. This is a personal, anecdotal observation rather than a benchmark, so your mileage may vary depending on the task.
 
 - [@spfx GitHub Copilot Chat participant](https://pnp.github.io/blog/post/spfx-toolkit-vscode-chat-pre-release/) - SPFx Toolkit's Copilot Chat participant that answers SPFx setup and scaffolding questions directly inside VS Code.
+- [SPFx Toolkit Language Model Tools](https://pnp.github.io/vscode-viva/features/github-copilot-capabilities) - SPFx Toolkit's GitHub Copilot agent-mode tools for managing a SharePoint Online tenant (site creation, app catalog operations, page creation) directly from chat prompts.
 - [pnp/cli-microsoft365-mcp-server](https://github.com/pnp/cli-microsoft365-mcp-server) - MCP server that exposes the CLI for Microsoft 365 as tools for AI agents to manage Microsoft 365 and SPFx projects.
 - [Microsoft 365 Copilot extensibility overview](https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/overview-copilot-connector) - Official docs on connecting Microsoft Graph data and custom connectors to Microsoft 365 Copilot.
 - [SharePoint Framework (SPFx) roadmap update – July 2026](https://devblogs.microsoft.com/microsoft365dev/sharepoint-framework-spfx-roadmap-update-july-2026/) - Official roadmap post covering SharePoint Copilot Apps and upcoming AI-related SPFx capabilities.
+- [Use GitHub Copilot to migrate SPFx 1.21 → 1.22 (Heft)](https://www.petkir.at/blog/spfx-1-22-copilot-assisted-migration) - Walkthrough with a reusable Copilot prompt for migrating an SPFx solution's toolchain from gulp to Heft.
 
 ## Learning Resources
 
