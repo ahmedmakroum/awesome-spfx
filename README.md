@@ -22,7 +22,6 @@ There isn't a lot of curated, up-to-date documentation specifically for the SPFx
 - [Learning Resources](#learning-resources)
 - [Video Tutorials](#video-tutorials)
 - [Community](#community)
-- [Licensing](#licensing)
 
 ## Official Docs & Resources
 
@@ -115,7 +114,3 @@ There isn't a lot of curated, up-to-date documentation specifically for the SPFx
 ## Contributing
 
 Contributions are welcome! Please read the [contribution guidelines](CONTRIBUTING.md) first.
-
-## Licensing
-
-[MIT](LICENSE)
