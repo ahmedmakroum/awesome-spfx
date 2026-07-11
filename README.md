@@ -16,6 +16,7 @@ There isn't a lot of curated, up-to-date documentation specifically for the SPFx
 - [PnP Libraries](#pnp-libraries)
 - [Sample Galleries](#sample-galleries)
 - [Dev Tools & VS Code Extensions](#dev-tools--vs-code-extensions)
+- [SharePoint Migration Tools](#sharepoint-migration-tools)
 - [Boilerplates & Starters](#boilerplates--starters)
 - [Testing & CI/CD](#testing--cicd)
 - [AI / Copilot Integrations](#ai--copilot-integrations)
@@ -48,6 +49,8 @@ There isn't a lot of curated, up-to-date documentation specifically for the SPFx
 
 - [CLI for Microsoft 365](https://github.com/pnp/cli-microsoft365) - Cross-platform CLI to manage Microsoft 365 tenants and SPFx projects (validate, upgrade, deploy, and more).
 - [PnPjs](https://github.com/pnp/pnpjs) - Fluent, modular JavaScript/TypeScript library for calling SharePoint and Microsoft Graph REST APIs.
+- [PnP Modern Search](https://microsoft-search.github.io/pnp-modern-search/) - Open-source modern SharePoint web parts for building advanced search experiences in SharePoint Online.
+- [PnP PowerShell](https://pnp.github.io/powershell/) - PowerShell cmdlets for common SharePoint Online provisioning, administration, and automation scenarios.
 - [@pnp/spfx-controls-react](https://github.com/pnp/sp-dev-fx-controls-react) - Reusable React UI controls (people picker, rich text, list item picker, etc.) for SPFx web parts and extensions.
 - [@pnp/spfx-property-controls](https://github.com/pnp/sp-dev-fx-property-controls) - Reusable property pane controls (site picker, collection data editor, and more) for SPFx web part properties.
 
@@ -59,10 +62,16 @@ There isn't a lot of curated, up-to-date documentation specifically for the SPFx
 
 ## Dev Tools & VS Code Extensions
 
+- [Fluent UI Theme Designer](https://fluentuipr.z22.web.core.windows.net/heads/master/theming-designer/index.html) - Web-based designer for creating custom Fluent UI themes that can be applied to SPFx solutions.
 - [SharePoint Framework Toolkit (vscode-viva)](https://github.com/pnp/vscode-viva) - VS Code extension covering the full SPFx lifecycle: scaffolding, samples, Gulp tasks, and tenant/app catalog management.
 - [SP Editor](https://github.com/pnp/sp-editor) - Chrome/Edge browser extension for editing JS/CSS files, property bag values, and webhooks, and running PnP JS snippets directly against a SharePoint site from DevTools.
 - [SP Formatter](https://marketplace.visualstudio.com/items?itemName=s-kainet.sp-formatter) - VS Code extension (paired with a browser extension) for editing SharePoint column, view, and form formatting JSON with IntelliSense and live preview.
 - [SPFx Essentials](https://marketplace.visualstudio.com/items?itemName=eliostruyf.spfx-essentials) - VS Code extension with snippets and commands that speed up everyday SPFx project tasks.
+
+## SharePoint Migration Tools
+
+- [ShareGate](https://sharegate.com/download-migration-tool) - Microsoft 365 migration and governance tool that helps plan, move, and manage SharePoint content.
+- [SharePoint Migration Tool](https://learn.microsoft.com/en-us/sharepointmigration/how-to-use-the-sharepoint-migration-tool) - Free Microsoft migration tool for moving content from on-premises SharePoint sites to Microsoft 365.
 
 ## Boilerplates & Starters
 
@@ -109,6 +118,7 @@ There isn't a lot of curated, up-to-date documentation specifically for the SPFx
 - [SharePoint Stack Exchange — sharepoint-framework tag](https://sharepoint.stackexchange.com/questions/tagged/sharepoint-framework) - Q&A tag for SharePoint Framework development questions.
 - [Microsoft 365 & Power Platform Community calls](https://aka.ms/community/calls) - Weekly community calls covering Microsoft 365, Power Platform, and SPFx news, demos, and Q&A.
 - [Microsoft 365 and SharePoint Server Discord](https://discord.com/invite/r-sharepoint-874829774902689863) - Community Discord server for SharePoint, Microsoft 365, and SPFx discussion.
+- [Microsoft 365 & Power Platform Community (PnP)](https://pnp.github.io/) - Community-driven guidance, documentation, samples, and tooling for modern SharePoint and Microsoft 365 development.
 - [PnP GitHub organization](https://github.com/pnp) - Home of the official and community-maintained PnP repositories referenced throughout this list.
 
 ## Contributing
