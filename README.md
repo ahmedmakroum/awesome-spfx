@@ -103,6 +103,12 @@ There isn't a lot of curated, up-to-date documentation specifically for the SPFx
 - [PnP blog](https://pnp.github.io/blog/) - Official Microsoft 365 & Power Platform Community blog covering SPFx releases, tooling, and how-tos.
 - [SharePoint Framework — Configure a development environment (Microsoft Learn training)](https://learn.microsoft.com/en-us/training/modules/sharepoint-spfx-get-started/) - Free, guided Microsoft Learn training module for getting started with SPFx.
 - [Microsoft 365 & SharePoint PnP Weekly](https://www.youtube.com/playlist?list=PLB_fukFwGnsRCl_XIYjnJbMwOKlI9xkPK) - Long-running weekly video/podcast series covering SharePoint, SPFx, and Microsoft 365 dev news.
+- [Use Microsoft Graph and non-Microsoft APIs (Microsoft Learn training)](https://learn.microsoft.com/en-us/training/modules/sharepoint-spfx-graph-3rd-party-apis/) - Intermediate hands-on module for anonymous REST APIs, Entra ID-protected APIs, and Microsoft Graph in SPFx.
+- [Develop web parts with the SharePoint Framework (Microsoft Learn training)](https://learn.microsoft.com/en-us/training/modules/sharepoint-spfx-web-parts/) - Build and test client-side web parts in the SharePoint-hosted Workbench while exploring the core SPFx API.
+- [Enable SharePoint Framework web part configuration with property panes (Microsoft Learn training)](https://learn.microsoft.com/en-us/training/modules/sharepoint-spfx-web-part-property-pane/) - Hands-on module for building property panes, custom field controls, and reusable PnP controls.
+- [Work with SharePoint Content using the SharePoint Framework (Microsoft Learn training)](https://learn.microsoft.com/en-us/training/modules/sharepoint-spfx-spcontent/) - Practical module covering list and library CRUD, file uploads, mock data, and the SharePoint REST API.
+- [Extend the SharePoint user interface with SharePoint Framework extensions (Microsoft Learn training)](https://learn.microsoft.com/en-us/training/modules/sharepoint-spfx-extensions/) - Build application customizers, field customizers, and command sets through guided exercises.
+- [Build Microsoft Teams customization using the SharePoint Framework (Microsoft Learn training)](https://learn.microsoft.com/en-us/training/modules/sharepoint-spfx-teams-dev/) - Learn to surface SPFx web parts as Teams tabs and adapt components to their host.
 
 ## Video Tutorials
 
