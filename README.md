@@ -1,12 +1,12 @@
 # Awesome SPFx [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-> A curated list of resources, libraries, tools, and community content for building SharePoint Framework (SPFx) solutions.
+> Client-side development framework for extending SharePoint, Microsoft Teams, Outlook, and Viva Connections with web parts, extensions, and Adaptive Card Extensions.
 
 The **SharePoint Framework (SPFx)** is Microsoft's page and web part development model for building client-side web parts, extensions, and Adaptive Card Extensions that run in SharePoint, Microsoft Teams, Outlook, and Viva Connections. It's built on modern web tooling (TypeScript, npm, Webpack) and is the recommended way to extend SharePoint and Microsoft 365 with custom UI.
 
 This list is for developers who are new to SPFx and want a map of the ecosystem, as well as experienced developers looking for well-maintained libraries, tools, and community resources.
 
-There isn't a lot of curated, up-to-date documentation specifically for the SPFx ecosystem, most resources are scattered across official docs, blogs, and GitHub repos. I decided to put this list together to bring them into one place and hopefully save others some digging. I maintain a few other projects and write about web development from time to time, feel free to check out my [GitHub profile](https://github.com/ahmedmakroum) if you're curious.
+There isn't a lot of curated, up-to-date documentation specifically for the SPFx ecosystem; most resources are scattered across official docs, blogs, and GitHub repositories. This list brings the best of them together in one place.
 
 ## Contents
 
@@ -31,6 +31,9 @@ There isn't a lot of curated, up-to-date documentation specifically for the SPFx
 - [SharePoint Framework extensions overview](https://learn.microsoft.com/en-us/sharepoint/dev/spfx/extensions/overview-extensions) - Introduction to Application Customizers, Field Customizers, and Command Sets.
 - [Set up your SharePoint Framework development environment](https://learn.microsoft.com/en-us/sharepoint/dev/spfx/set-up-your-development-environment) - Official environment setup guide (Node.js, npm, tooling).
 - [SharePoint Framework category — Microsoft 365 Developer Blog](https://devblogs.microsoft.com/microsoft365dev/category/sharepoint-framework/) - Official announcements, roadmap updates, and release notes.
+- [Build your first SharePoint client-side web part (Hello World)](https://learn.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/get-started/build-a-hello-world-web-part) - Microsoft's canonical step-by-step tutorial for scaffolding, previewing, and packaging a first web part.
+- [SharePoint Framework Toolchain: Heft-based](https://learn.microsoft.com/en-us/sharepoint/dev/spfx/toolchain/sharepoint-framework-toolchain-rushstack-heft) - Explains the Heft build toolchain that replaced gulp in SPFx v1.22, why it changed, and the migration timeline.
+- [SharePoint Framework Debug Toolbar](https://learn.microsoft.com/en-us/sharepoint/dev/spfx/debug-toolbar) - How to debug SPFx components on real modern pages, the recommended path as the hosted workbench is retired.
 
 ## Environment Setup Notes
 
@@ -59,6 +62,7 @@ There isn't a lot of curated, up-to-date documentation specifically for the SPFx
 - [pnp/sp-dev-fx-extensions](https://github.com/pnp/sp-dev-fx-extensions) - Community sample gallery for SPFx Application Customizers, Field Customizers, and Command Sets.
 - [pnp/sp-dev-fx-webparts](https://github.com/pnp/sp-dev-fx-webparts) - Community sample gallery of hundreds of SPFx web parts, Teams tabs, and personal apps.
 - [OlivierCC/spfx-40-fantastics](https://github.com/OlivierCC/spfx-40-fantastics) - Sample kit of high-visual client-side web parts including carousels, image galleries, animations, maps, and editors.
+- [pnp/sp-dev-fx-aces](https://github.com/pnp/sp-dev-fx-aces) - Community sample gallery of Adaptive Card Extensions (ACEs) for Microsoft Viva Connections dashboards.
 
 ## Dev Tools & VS Code Extensions
 
@@ -87,8 +91,6 @@ There isn't a lot of curated, up-to-date documentation specifically for the SPFx
 - [Implement CI/CD for SPFx with Azure Pipelines](https://github.com/SharePoint/sp-dev-docs/blob/main/docs/spfx/toolchain/implement-ci-cd-with-azure-pipelines.md) - Official Microsoft guidance for building and releasing SPFx solutions with Azure Pipelines.
 
 ## AI / Copilot Integrations
-
-> **From experience:** for day-to-day SPFx development, ChatGPT Codex has felt noticeably more effective than Claude - it seems to hold SPFx-specific context (manifests, gulp/Heft toolchain quirks, PnP API shapes) better across a session and needs less hand-holding. This is a personal, anecdotal observation rather than a benchmark, so your mileage may vary depending on the task.
 
 - [@spfx GitHub Copilot Chat participant](https://pnp.github.io/blog/post/spfx-toolkit-vscode-chat-pre-release/) - SPFx Toolkit's Copilot Chat participant that answers SPFx setup and scaffolding questions directly inside VS Code.
 - [SPFx Toolkit Language Model Tools](https://pnp.github.io/vscode-viva/features/github-copilot-capabilities) - SPFx Toolkit's GitHub Copilot agent-mode tools for managing a SharePoint Online tenant (site creation, app catalog operations, page creation) directly from chat prompts.
