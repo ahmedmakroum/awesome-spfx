@@ -164,20 +164,23 @@ Useful web-part context members:
 - [SharePoint Framework category — Microsoft 365 Developer Blog](https://devblogs.microsoft.com/microsoft365dev/category/sharepoint-framework/) - Official announcements, roadmap updates, and release notes.
 - [Build your first SharePoint client-side web part (Hello World)](https://learn.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/get-started/build-a-hello-world-web-part) - Microsoft's canonical step-by-step tutorial for scaffolding, previewing, and packaging a first web part.
 - [SharePoint Framework Toolchain: Heft-based](https://learn.microsoft.com/en-us/sharepoint/dev/spfx/toolchain/sharepoint-framework-toolchain-rushstack-heft) - Explains the Heft build toolchain that replaced gulp in SPFx v1.22, why it changed, and the migration timeline.
-- [SharePoint Framework Debug Toolbar](https://learn.microsoft.com/en-us/sharepoint/dev/spfx/debug-toolbar) - How to debug SPFx components on real modern pages, the recommended path as the hosted workbench is retired.
+- [SharePoint Framework Debug Toolbar](https://learn.microsoft.com/en-us/sharepoint/dev/spfx/debug-toolbar) - How to inspect and debug SPFx components on real modern pages, including extensions that the hosted workbench cannot test.
+- [Connect SPFx components using dynamic data](https://learn.microsoft.com/en-us/sharepoint/dev/spfx/dynamic-data) - Use dynamic data to connect web parts and other SPFx components on a page.
+- [Use the MSGraphClientV3 to connect to Microsoft Graph](https://learn.microsoft.com/en-us/sharepoint/dev/spfx/use-msgraph) - Authenticate and call Microsoft Graph through the SPFx context.
+- [Accessibility in SharePoint web part design](https://learn.microsoft.com/en-us/sharepoint/dev/design/accessibility) - Design and test keyboard, screen-reader, and high-contrast experiences for web parts.
 
 ## Environment Setup Notes
 
-- [Microsoft 365 Developer Program FAQ](https://learn.microsoft.com/en-us/office/developer-program/microsoft-365-developer-program-faq) - Microsoft paused issuing free instant sandbox tenants after a January 2024 security incident and still hasn't fully restored them. In practice, plan on using your company/work tenant, converting a purchased Microsoft 365 subscription into a dev tenant, or qualifying through a Visual Studio subscription.
+- [Microsoft 365 Developer Program FAQ](https://learn.microsoft.com/en-us/office/developer-program/microsoft-365-developer-program-faq) - Check current eligibility for a free Microsoft 365 E5 developer sandbox; an ordinary Microsoft 365 enterprise subscription does not automatically include one.
 - [Unavailable hosted workbench (Microsoft Community Hub thread)](https://techcommunity.microsoft.com/t5/sharepoint-developer/unavailable-hosted-workbench/td-p/3043377) - Background on why the fully local workbench (`https://localhost:4321/temp/workbench.html`, no SharePoint site needed) was removed starting with SPFx v1.13, and why the hosted workbench has required a tenant domain (via the `SPFX_SERVE_TENANT_DOMAIN` environment variable) since v1.17. If you have no tenant access at all, pin your project to SPFx v1.12.1 or earlier to keep a working local workbench.
-- [🙏 Please upgrade React to a modern, supported version (SharePoint/sp-dev-docs#8265)](https://github.com/SharePoint/sp-dev-docs/issues/8265) - Context on why SPFx pins an exact React version per release (React 17.0.1 as of SPFx 1.19-1.23, see the [compatibility matrix](#official-docs--resources)). Install React with `--save-exact` matching your SPFx version - mismatches fail silently at runtime instead of at build time.
+- [🙏 Please upgrade React to a modern, supported version (SharePoint/sp-dev-docs#8265)](https://github.com/SharePoint/sp-dev-docs/issues/8265) - Context on why SPFx pins an exact React version per release (React 17.0.1 as of SPFx 1.19-1.23; see the official compatibility matrix above). Install React with `--save-exact` matching your SPFx version - mismatches fail silently at runtime instead of at build time.
 
 ## Getting Started / Generators
 
 - [@microsoft/generator-sharepoint](https://www.npmjs.com/package/@microsoft/generator-sharepoint) - The official Yeoman generator for scaffolding SPFx web parts, extensions, and library components.
 - [pnp/generator-spfx](https://github.com/pnp/generator-spfx) - Community-driven Yeoman generator that extends the official generator with extra governance options.
 - [SharePoint/spfx](https://github.com/SharePoint/spfx) - Microsoft's new open-source `spfx` CLI and template system that is replacing the Yeoman-based generator.
-- [spfx-fast-serve](https://github.com/s-KaiNet/spfx-fast-serve) - Drop-in Webpack-based dev server that makes `gulp serve` 10-15x faster.
+- [spfx-fast-serve](https://github.com/s-KaiNet/spfx-fast-serve) - Faster local serving for legacy gulp-based SPFx projects; check support before using it with a Heft project.
 
 ## PnP Libraries
 
@@ -194,6 +197,7 @@ Useful web-part context members:
 - [pnp/sp-dev-fx-webparts](https://github.com/pnp/sp-dev-fx-webparts) - Community sample gallery of hundreds of SPFx web parts, Teams tabs, and personal apps.
 - [OlivierCC/spfx-40-fantastics](https://github.com/OlivierCC/spfx-40-fantastics) - Sample kit of high-visual client-side web parts including carousels, image galleries, animations, maps, and editors.
 - [pnp/sp-dev-fx-aces](https://github.com/pnp/sp-dev-fx-aces) - Community sample gallery of Adaptive Card Extensions (ACEs) for Microsoft Viva Connections dashboards.
+- [React poll web part sample](https://github.com/pnp/sp-dev-fx-webparts/tree/main/samples/react-poll) - Inspect a complete React, PnPjs, and SharePoint-list example alongside the video tutorial below.
 
 ## Dev Tools & VS Code Extensions
 
@@ -202,6 +206,9 @@ Useful web-part context members:
 - [SP Editor](https://github.com/pnp/sp-editor) - Chrome/Edge browser extension for editing JS/CSS files, property bag values, and webhooks, and running PnP JS snippets directly against a SharePoint site from DevTools.
 - [SP Formatter](https://marketplace.visualstudio.com/items?itemName=s-kainet.sp-formatter) - VS Code extension (paired with a browser extension) for editing SharePoint column, view, and form formatting JSON with IntelliSense and live preview.
 - [SPFx Essentials](https://marketplace.visualstudio.com/items?itemName=eliostruyf.spfx-essentials) - VS Code extension with snippets and commands that speed up everyday SPFx project tasks.
+- [Microsoft Graph Explorer](https://developer.microsoft.com/en-us/graph/graph-explorer) - Try Microsoft Graph requests and inspect responses before adding them to an SPFx component.
+- [CLI for Microsoft 365: SPFx project doctor](https://pnp.github.io/cli-microsoft365/cmd/spfx/project/project-doctor/) - Check an SPFx project's dependencies and configuration and get a report of issues to fix.
+- [CLI for Microsoft 365: SPFx project upgrade](https://pnp.github.io/cli-microsoft365/cmd/spfx/project/project-upgrade/) - Generate a version-specific upgrade report without changing project files.
 
 ## SharePoint Migration Tools
 
@@ -210,7 +217,7 @@ Useful web-part context members:
 
 ## Boilerplates & Starters
 
-- [pnp/sp-starter-kit](https://github.com/pnp/sp-starter-kit) - End-to-end showcase solution bundling multiple SPFx web parts, extensions, and provisioning scripts to jump-start a modern intranet.
+- [pnp/sp-starter-kit](https://github.com/pnp/sp-starter-kit) - Older end-to-end intranet showcase with SPFx web parts, extensions, and provisioning scripts; check its framework version before reusing code.
 - [apvee/spfx-react-toolkit](https://github.com/apvee/spfx-react-toolkit) - React runtime and hooks library for SPFx with instance-scoped state isolation across web parts, extensions, and command sets.
 
 ## Testing & CI/CD
@@ -229,8 +236,12 @@ Useful web-part context members:
 - [Microsoft 365 Copilot extensibility overview](https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/overview-copilot-connector) - Official docs on connecting Microsoft Graph data and custom connectors to Microsoft 365 Copilot.
 - [SharePoint Framework (SPFx) roadmap update – July 2026](https://devblogs.microsoft.com/microsoft365dev/sharepoint-framework-spfx-roadmap-update-july-2026/) - Official roadmap post covering SharePoint Copilot Apps and upcoming AI-related SPFx capabilities.
 - [Use GitHub Copilot to migrate SPFx 1.21 → 1.22 (Heft)](https://www.petkir.at/blog/spfx-1-22-copilot-assisted-migration) - Walkthrough with a reusable Copilot prompt for migrating an SPFx solution's toolchain from gulp to Heft.
+- [SharePoint Copilot Apps overview (preview)](https://learn.microsoft.com/en-us/sharepoint/dev/spfx/copilot/overview-copilot-apps) - Learn how SPFx components can provide interactive UI in Microsoft 365 Copilot during the public preview.
+- [Build your first SharePoint Copilot App (preview)](https://learn.microsoft.com/en-us/sharepoint/dev/spfx/copilot/get-started/build-your-first-copilot-app) - Create, test, package, and deploy a preview Copilot App with the official tutorial.
 
 ## Learning Resources
+
+New to SPFx? Start with the development-environment module, build a web part, then learn SharePoint data and Microsoft Graph before packaging a solution for deployment. After that, follow the extensions or Viva Connections material for the component type you need. Check the official compatibility matrix above when a tutorial uses an older toolchain.
 
 - [Voitanos blog (Andrew Connell)](https://www.andrewconnell.com/blog/) - Long-running, in-depth SPFx and Microsoft 365 development blog with courses and office hours.
 - [PnP blog](https://pnp.github.io/blog/) - Official Microsoft 365 & Power Platform Community blog covering SPFx releases, tooling, and how-tos.
@@ -242,14 +253,27 @@ Useful web-part context members:
 - [Work with SharePoint Content using the SharePoint Framework (Microsoft Learn training)](https://learn.microsoft.com/en-us/training/modules/sharepoint-spfx-spcontent/) - Practical module covering list and library CRUD, file uploads, mock data, and the SharePoint REST API.
 - [Extend the SharePoint user interface with SharePoint Framework extensions (Microsoft Learn training)](https://learn.microsoft.com/en-us/training/modules/sharepoint-spfx-extensions/) - Build application customizers, field customizers, and command sets through guided exercises.
 - [Build Microsoft Teams customization using the SharePoint Framework (Microsoft Learn training)](https://learn.microsoft.com/en-us/training/modules/sharepoint-spfx-teams-dev/) - Learn to surface SPFx web parts as Teams tabs and adapt components to their host.
+- [Extend Microsoft SharePoint (Microsoft Learn learning path)](https://learn.microsoft.com/en-us/training/paths/m365-sharepoint-associate/) - Follow a nine-module path from environment setup through APIs, extensions, and production deployment.
+- [Create Adaptive Card Extensions for Microsoft Viva Connections (Microsoft Learn training)](https://learn.microsoft.com/en-us/training/modules/sharepoint-spfx-adaptive-card-extension-card-types/) - Build card and quick views for Viva Connections dashboards in guided exercises.
+- [Deploy SharePoint Framework components to production (Microsoft Learn training)](https://learn.microsoft.com/en-us/training/modules/sharepoint-spfx-deployment/) - Practice packaging, app-catalog deployment, and version updates.
+- [Extend Microsoft Viva Connections (Microsoft Learn learning path)](https://learn.microsoft.com/en-us/training/paths/m365-extend-viva-connections/) - Learn when to use web parts, application customizers, and Adaptive Card Extensions in Viva Connections.
+- [PnP SPFx sample getting-started guide](https://pnp.github.io/sp-dev-fx-webparts/gettingstarted/) - Find a sample's SPFx version, install its dependencies, and run it in a development tenant.
+- [PnPjs getting started](https://pnp.github.io/pnpjs/getting-started/) - Set up PnPjs for SharePoint and Graph requests, including SPFx context integration and version requirements.
 
 ## Video Tutorials
 
 > Treat these as onboarding material: they're great for learning how to scaffold a project, run it locally, and package/deploy it, but SPFx's APIs and best practices move fast enough that specific code shown in older videos can go stale within a year or two. Cross-check anything beyond the basics against the official docs linked above.
 
-- [SharePoint Framework for Beginners 2025 (playlist)](https://www.youtube.com/watch?v=tL-qXVMDtFk) - Actively updated, from-scratch series covering environment setup, Yeoman scaffolding, and building web parts with React hooks.
+- [SharePoint Framework for Beginners, Series 2 (2025 playlist)](https://www.youtube.com/playlist?list=PLGWG_rRY_j4PxyQ3H9UMyECwvw3SWVMIK) - From-scratch lessons on environment setup, scaffolding, and React web parts; compare toolchain steps with the current docs.
 - [SPGuides YouTube channel](https://www.youtube.com/channel/UCm9EZ5sUkwJCbA3ctabVQJg) - Large, frequently updated library of SPFx, SharePoint, and Power Platform video tutorials from Microsoft MVP Bijay Kumar.
 - [Mastering the SharePoint Framework (Voitanos)](https://www.voitanos.io/course-master-sharepoint-framework/) - Paid, in-depth video course by Andrew Connell covering SPFx fundamentals through advanced extensibility topics.
+- [SharePoint Framework: Getting started with extending the UX (Microsoft Community Learning)](https://www.youtube.com/watch?v=kNFi4H84Uds) - Overview of where SPFx web parts and extensions fit across Microsoft 365.
+- [Introducing the new toolchain in SharePoint Framework 1.22 (Microsoft Community Learning)](https://www.youtube.com/watch?v=VlQgS9ldc3Y) - Walkthrough of the Heft-based build workflow with Vesa Juvonen and Andrew Connell.
+- [Getting Started with SPFx Application Customizer (Microsoft Community Learning)](https://www.youtube.com/watch?v=HTrr1YfP1U8) - Beginner-friendly demonstration of an Application Customizer extension.
+- [Building a React Calendar Web Part with SPFx (Microsoft Community Learning)](https://www.youtube.com/watch?v=39jRwZHg698) - Practical React web-part sample; check its SPFx version before copying dependencies.
+- [Building a custom poll web part with SPFx and React (Microsoft Community Learning)](https://www.youtube.com/watch?v=BoiNdY97AV0) - Follow a React Hooks and PnPjs build with a linked source sample and SharePoint list provisioning.
+- [Adaptive Card Extensions for Viva Connections (Microsoft Community Learning playlist)](https://www.youtube.com/playlist?list=PLR9nK3mnD-OUjNKUMsWJwYnRnsmxXojYs) - Card and quick-view walkthroughs recorded with an older SPFx toolchain; use current docs for setup commands.
+- [Creating your first SharePoint Copilot App (Microsoft Community Learning)](https://www.youtube.com/watch?v=1TaK6osdvc0) - End-to-end preview tutorial for an SPFx Copilot App; follow the preview documentation for current requirements.
 
 ## Community
 
